@@ -157,6 +157,36 @@ document.querySelectorAll('.skill-card').forEach(card => {
 });
 
 /* =========================================================
+   Theme toggle
+   ========================================================= */
+function toggleTheme() {
+  const html = document.documentElement;
+  const icon = document.querySelector('.theme-icon');
+  const current = html.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', next);
+  if (icon) {
+    icon.textContent = next === 'dark' ? '☀️' : '🌙';
+  }
+  try {
+    localStorage.setItem('theme', next);
+  } catch (e) {}
+}
+
+(function initTheme() {
+  try {
+    const stored = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const theme = stored || (prefersDark ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', theme);
+    const icon = document.querySelector('.theme-icon');
+    if (icon) {
+      icon.textContent = theme === 'dark' ? '☀️' : '🌙';
+    }
+  } catch (e) {}
+})();
+
+/* =========================================================
    Project cards tilt on hover
    ========================================================= */
 document.querySelectorAll('.project-card').forEach(card => {
