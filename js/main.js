@@ -17,6 +17,36 @@ document.querySelectorAll('.site-nav a').forEach(link => {
 });
 
 /* =========================================================
+   Theme toggle
+   ========================================================= */
+function toggleTheme() {
+  const html = document.documentElement;
+  const icon = document.querySelector('.theme-icon');
+  const current = html.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', next);
+  if (icon) {
+    icon.textContent = next === 'dark' ? '☀️' : '🌙';
+  }
+  try {
+    localStorage.setItem('theme', next);
+  } catch (e) {}
+}
+
+(function initTheme() {
+  try {
+    const stored = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const theme = stored || (prefersDark ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', theme);
+    const icon = document.querySelector('.theme-icon');
+    if (icon) {
+      icon.textContent = theme === 'dark' ? '☀️' : '🌙';
+    }
+  } catch (e) {}
+})();
+
+/* =========================================================
    Scroll animations
    ========================================================= */
 const observerOptions = {
@@ -143,7 +173,6 @@ if (scrollTopBtn) {
     }
   }
 
-  // Start after a short delay
   setTimeout(type, 600);
 })();
 
@@ -155,36 +184,6 @@ document.querySelectorAll('.skill-card').forEach(card => {
     card.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
   });
 });
-
-/* =========================================================
-   Theme toggle
-   ========================================================= */
-function toggleTheme() {
-  const html = document.documentElement;
-  const icon = document.querySelector('.theme-icon');
-  const current = html.getAttribute('data-theme');
-  const next = current === 'dark' ? 'light' : 'dark';
-  html.setAttribute('data-theme', next);
-  if (icon) {
-    icon.textContent = next === 'dark' ? '☀️' : '🌙';
-  }
-  try {
-    localStorage.setItem('theme', next);
-  } catch (e) {}
-}
-
-(function initTheme() {
-  try {
-    const stored = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const theme = stored || (prefersDark ? 'dark' : 'light');
-    document.documentElement.setAttribute('data-theme', theme);
-    const icon = document.querySelector('.theme-icon');
-    if (icon) {
-      icon.textContent = theme === 'dark' ? '☀️' : '🌙';
-    }
-  } catch (e) {}
-})();
 
 /* =========================================================
    Project cards tilt on hover
