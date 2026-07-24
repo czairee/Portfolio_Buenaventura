@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>John Czairee S. Buenaventura | IT Professional</title>
-  <link rel="stylesheet" href="css/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
   <header class="site-header">
@@ -31,8 +31,13 @@
     <section class="hero" id="about">
       <div class="container hero-grid">
         <div class="hero-content">
+          <p class="hero-greeting">Hi, I'm</p>
           <h1>John Czairee <span>S. Buenaventura</span></h1>
           <p class="hero-subtitle">IT Professional | Software Developer | Tech Support Specialist</p>
+          <p class="hero-bio">
+            I build practical software, troubleshoot complex systems, and turn ideas into working solutions.
+            Based in Morong, Rizal — focused on clean code, real impact, and continuous learning.
+          </p>
           <div class="hero-contact">
             <a href="tel:+639274855355" class="contact-item">
               <span class="contact-icon">📞</span>
@@ -54,8 +59,8 @@
         </div>
         <div class="hero-image">
           <div class="profile-card">
-            <div class="profile-decoration"></div>
-            <div class="profile-initials">JB</div>
+            <img src="images/profile.jpg" alt="John Czairee S. Buenaventura" class="profile-img" />
+            <div class="profile-ring"></div>
           </div>
         </div>
       </div>
@@ -66,7 +71,7 @@
         <h2 class="section-title">Technical <span>Skills</span></h2>
         <p class="section-subtitle">Technologies and tools I work with</p>
         <div class="skills-grid">
-          <article class="skill-card">
+          <article class="skill-card fade-in">
             <div class="skill-icon">💻</div>
             <h3>Programming Languages</h3>
             <div class="skill-tags">
@@ -81,7 +86,7 @@
               <span class="skill-tag">SQL</span>
             </div>
           </article>
-          <article class="skill-card">
+          <article class="skill-card fade-in">
             <div class="skill-icon">🛠️</div>
             <h3>Tools & Platforms</h3>
             <div class="skill-tags">
@@ -93,7 +98,7 @@
               <span class="skill-tag">Arduino</span>
             </div>
           </article>
-          <article class="skill-card">
+          <article class="skill-card fade-in">
             <div class="skill-icon">🔧</div>
             <h3>IT & Technical Skills</h3>
             <div class="skill-tags">
@@ -114,7 +119,7 @@
         <h2 class="section-title">Professional <span>Experience</span></h2>
         <p class="section-subtitle">My internship and work history</p>
         <div class="experience-timeline">
-          <div class="experience-item">
+          <div class="experience-item fade-in">
             <div class="experience-dot"></div>
             <div class="experience-content">
               <h3>IT/Tech Support Intern</h3>
@@ -138,7 +143,7 @@
         <h2 class="section-title">Featured <span>Projects</span></h2>
         <p class="section-subtitle">A selection of my recent work</p>
         <div class="projects-grid">
-          <article class="project-card">
+          <article class="project-card fade-in">
             <div class="project-header">
               <h3>Gzing App</h3>
               <p class="tech">Kotlin, XML | 2025</p>
@@ -152,7 +157,7 @@
               </ul>
             </div>
           </article>
-          <article class="project-card">
+          <article class="project-card fade-in">
             <div class="project-header">
               <h3>Yviang's Kitchen</h3>
               <p class="tech">PHP, MySQL, HTML/CSS/JS | 2024</p>
@@ -166,7 +171,7 @@
               </ul>
             </div>
           </article>
-          <article class="project-card">
+          <article class="project-card fade-in">
             <div class="project-header">
               <h3>Drippy E-Commerce</h3>
               <p class="tech">PHP, MySQL, JavaScript, CSS | 2023</p>
@@ -189,17 +194,17 @@
         <h2 class="section-title">Education & <span>Certifications</span></h2>
         <p class="section-subtitle">Academic background and professional credentials</p>
         <div class="education-grid">
-          <article class="education-card">
+          <article class="education-card fade-in">
             <h3>Bachelor of Science in Information Technology</h3>
             <p class="school">Our Lady of Fatima University</p>
             <p class="year">2022 - 2026</p>
           </article>
-          <article class="education-card">
+          <article class="education-card fade-in">
             <h3>Senior High School (TVL-ICT)</h3>
             <p class="school">Tomas Claudio Colleges</p>
             <p class="year">2020 - 2022</p>
           </article>
-          <article class="education-card">
+          <article class="education-card fade-in">
             <h3>Cisco Networking Academy</h3>
             <div class="cert-list">
               <span class="cert-badge">CCNAv7: Introduction to Networks</span>
@@ -213,23 +218,23 @@
     <section class="contact" id="contact">
       <div class="container">
         <h2 class="section-title">Get In <span>Touch</span></h2>
-        <p class="section-subtitle">Feel free to reach out for collaborations or opportunities</p>
+        <p class="section-subtitle">Open to opportunities, collaborations, and technical conversations</p>
         <div class="contact-grid">
-          <div class="contact-item-card">
+          <a href="tel:+639274855355" class="contact-item-card fade-in">
             <div class="contact-item-icon">📞</div>
             <h3>Phone</h3>
             <p>+63 927 4855 355</p>
-          </div>
-          <div class="contact-item-card">
+          </a>
+          <a href="mailto:czaireejohn@gmail.com" class="contact-item-card fade-in">
             <div class="contact-item-icon">✉️</div>
             <h3>Email</h3>
             <p>czaireejohn@gmail.com</p>
-          </div>
-          <div class="contact-item-card">
-            <div class="contact-item-icon">📍</div>
-            <h3>Location</h3>
-            <p>Morong, Rizal, Philippines</p>
-          </div>
+          </a>
+          <a href="https://github.com/czairee" target="_blank" rel="noopener" class="contact-item-card fade-in">
+            <div class="contact-item-icon">🐙</div>
+            <h3>GitHub</h3>
+            <p>@czairee</p>
+          </a>
         </div>
       </div>
     </section>
