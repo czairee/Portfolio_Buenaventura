@@ -26,7 +26,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Geist', system-ui, sans-serif;
   color: var(--ink-soft);
   line-height: 1.6;
   background: var(--paper);
