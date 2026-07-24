@@ -10,253 +10,225 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#about" class="logo">J<span>.</span>C</a>
-      <button class="theme-toggle" aria-label="Toggle theme" onclick="toggleTheme()">
-        <span class="theme-icon">🌙</span>
-      </button>
-      <button class="nav-toggle" aria-label="Toggle menu" onclick="toggleMenu()">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="site-nav" id="mainNav">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+        <a href="#about" class="brand">J<span>.</span>C</a>
 
-  <main>
-    <section class="hero" id="about">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <div class="hero-badge">
-            <span class="status-dot"></span>
-            <span class="status-text">Open to opportunities</span>
-          </div>
-          <p class="hero-greeting">Hi, I'm</p>
-          <h1>John Czairee <span>S. Buenaventura</span></h1>
-          <p class="hero-subtitle">IT Professional | Software Developer | Tech Support Specialist</p>
-          <p class="hero-bio">
-            I build practical software, troubleshoot complex systems, and turn ideas into working solutions.
-            Based in Morong, Rizal — focused on clean code, real impact, and continuous learning.
-          </p>
-          <div class="hero-contact">
-            <a href="tel:+639****5355" class="contact-item">
-              <span class="contact-icon">📞</span>
-              <span>+63 927 4855 355</span>
-            </a>
-            <a href="mailto:czaireejohn@gmail.com" class="contact-item">
-              <span class="contact-icon">✉️</span>
-              <span>czaireejohn@gmail.com</span>
-            </a>
-            <span class="contact-item">
-              <span class="contact-icon">📍</span>
-              <span>Morong, Rizal</span>
-            </span>
-          </div>
-          <div class="hero-cta">
-            <a href="#contact" class="btn btn-primary">Get In Touch</a>
-            <a href="#projects" class="btn btn-ghost">View Projects</a>
-          </div>
-        </div>
-        <div class="hero-image">
-          <div class="profile-card">
-            <img src="images/profile.jpg" alt="John Czairee S. Buenaventura" class="profile-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-            <div class="profile-initials" aria-hidden="true">JB</div>
-            <div class="profile-ring"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="skills" id="skills">
-      <div class="container">
-        <h2 class="section-title">Technical <span>Skills</span></h2>
-        <p class="section-subtitle">Technologies and tools I work with</p>
-        <div class="skills-grid">
-          <article class="skill-card fade-in">
-            <div class="skill-icon">💻</div>
-            <h3>Programming Languages</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">HTML</span>
-              <span class="skill-tag">CSS</span>
-              <span class="skill-tag">JavaScript</span>
-              <span class="skill-tag">PHP</span>
-              <span class="skill-tag">Java</span>
-              <span class="skill-tag">Kotlin</span>
-              <span class="skill-tag">Python</span>
-              <span class="skill-tag">C/C++</span>
-              <span class="skill-tag">SQL</span>
-            </div>
-          </article>
-          <article class="skill-card fade-in">
-            <div class="skill-icon">🛠️</div>
-            <h3>Tools & Platforms</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">Visual Studio</span>
-              <span class="skill-tag">Android Studio</span>
-              <span class="skill-tag">Dev C++</span>
-              <span class="skill-tag">PyCharm</span>
-              <span class="skill-tag">Oracle VirtualBox</span>
-              <span class="skill-tag">Arduino</span>
-            </div>
-          </article>
-          <article class="skill-card fade-in">
-            <div class="skill-icon">🔧</div>
-            <h3>IT & Technical Skills</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">Hardware Installation</span>
-              <span class="skill-tag">Diagnostics</span>
-              <span class="skill-tag">Network Setup</span>
-              <span class="skill-tag">OS Installation</span>
-              <span class="skill-tag">Driver Configuration</span>
-              <span class="skill-tag">IT Support</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience">
-      <div class="container">
-        <h2 class="section-title">Professional <span>Experience</span></h2>
-        <p class="section-subtitle">My internship and work history</p>
-        <div class="experience-timeline">
-          <div class="experience-item fade-in">
-            <div class="experience-dot"></div>
-            <div class="experience-content">
-              <h3>IT/Tech Support Intern</h3>
-              <p class="company">MicroPhase Corporation</p>
-              <p class="period">Internship</p>
-              <ul>
-                <li>Performed testing, troubleshooting, and preventive maintenance of laptops, desktops, and monitors</li>
-                <li>Upgraded and installed hardware components including RAM and SSDs</li>
-                <li>Installed, configured, and activated operating systems, drivers, and software applications</li>
-                <li>Assembled and configured desktop computers with quality assurance checks</li>
-                <li>Assisted in basic network setup and connectivity troubleshooting</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="projects" id="projects">
-      <div class="container">
-        <h2 class="section-title">Featured <span>Projects</span></h2>
-        <p class="section-subtitle">A selection of my recent work</p>
-        <div class="projects-grid">
-          <article class="project-card fade-in">
-            <div class="project-header">
-              <h3>Gzing App</h3>
-              <p class="tech">Kotlin, XML | 2025</p>
-            </div>
-            <div class="project-body">
-              <h4>Native Android Geofencing Application</h4>
-              <ul>
-                <li>Developed real-time geofencing to monitor user proximity to destinations</li>
-                <li>Integrated Fused Location Provider with configurable alert radius</li>
-                <li>Programmed high-priority notifications and alarms for commuters</li>
-              </ul>
-            </div>
-          </article>
-          <article class="project-card fade-in">
-            <div class="project-header">
-              <h3>Yviang's Kitchen</h3>
-              <p class="tech">PHP, MySQL, HTML/CSS/JS | 2024</p>
-            </div>
-            <div class="project-body">
-              <h4>Inventory & Sales Management System</h4>
-              <ul>
-                <li>Full-stack system for real-time inventory tracking and low-stock alerts</li>
-                <li>Dynamic reporting tools for sales trend analysis</li>
-                <li>Secure user authentication and input validation</li>
-              </ul>
-            </div>
-          </article>
-          <article class="project-card fade-in">
-            <div class="project-header">
-              <h3>Drippy E-Commerce</h3>
-              <p class="tech">PHP, MySQL, JavaScript, CSS | 2023</p>
-            </div>
-            <div class="project-body">
-              <h4>Full-Stack E-Commerce Platform</h4>
-              <ul>
-                <li>Dynamic product displays with responsive, user-centric UI</li>
-                <li>MySQL database for inventory, user accounts, and order processing</li>
-                <li>Secure order management system</li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="education" id="education">
-      <div class="container">
-        <h2 class="section-title">Education & <span>Certifications</span></h2>
-        <p class="section-subtitle">Academic background and professional credentials</p>
-        <div class="education-grid">
-          <article class="education-card fade-in">
-            <h3>Bachelor of Science in Information Technology</h3>
-            <p class="school">Our Lady of Fatima University</p>
-            <p class="year">2022 - 2026</p>
-          </article>
-          <article class="education-card fade-in">
-            <h3>Senior High School (TVL-ICT)</h3>
-            <p class="school">Tomas Claudio Colleges</p>
-            <p class="year">2020 - 2022</p>
-          </article>
-          <article class="education-card fade-in">
-            <h3>Cisco Networking Academy</h3>
-            <div class="cert-list">
-              <span class="cert-badge">CCNAv7: Introduction to Networks</span>
-              <span class="cert-badge">CCNA: Switching, Routing, and Wireless Essentials</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <div class="container">
-        <h2 class="section-title">Get In <span>Touch</span></h2>
-        <p class="section-subtitle">Open to opportunities, collaborations, and technical conversations</p>
-        <div class="contact-grid">
-          <a href="tel:+639****5355" class="contact-item-card fade-in">
-            <div class="contact-item-icon">📞</div>
-            <h3>Phone</h3>
-            <p>+63 927 4855 355</p>
+        <nav class="sidebar-nav">
+          <a href="#about" class="nav-item">
+            <span class="nav-icon">◎</span>
+            <span>About</span>
           </a>
-          <a href="mailto:czaireejohn@gmail.com" class="contact-item-card fade-in">
-            <div class="contact-item-icon">✉️</div>
-            <h3>Email</h3>
-            <p>czaireejohn@gmail.com</p>
+          <a href="#stack" class="nav-item">
+            <span class="nav-icon">⌘</span>
+            <span>Stack</span>
           </a>
-          <a href="https://github.com/czairee" target="_blank" rel="noopener" class="contact-item-card fade-in">
-            <div class="contact-item-icon">🐙</div>
-            <h3>GitHub</h3>
-            <p>@czairee</p>
+          <a href="#projects" class="nav-item">
+            <span class="nav-icon">▣</span>
+            <span>Projects</span>
           </a>
+          <a href="#experience" class="nav-item">
+            <span class="nav-icon">◷</span>
+            <span>Experience</span>
+          </a>
+          <a href="#education" class="nav-item">
+            <span class="nav-icon">⬚</span>
+            <span>Education</span>
+          </a>
+          <a href="#contact" class="nav-item">
+            <span class="nav-icon">✉</span>
+            <span>Contact</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-footer">
+          <p class="sidebar-hint">For work, collabs & everything else:</p>
+          <a href="mailto:czaireejohn@gmail.com" class="sidebar-email">czaireejohn@gmail.com</a>
+          <div class="sidebar-controls">
+            <button class="icon-btn" aria-label="Toggle theme" onclick="toggleTheme()">
+              <span class="theme-icon">🌙</span>
+            </button>
+          </div>
         </div>
       </div>
-    </section>
-  </main>
+    </aside>
 
-  <button class="scroll-top" aria-label="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-    ↑
-  </button>
+    <main class="content">
+      <section class="hero" id="about">
+        <div class="container">
+          <div class="hero-layout">
+            <div class="hero-visual">
+              <div class="profile-card">
+                <img src="images/profile.jpg" alt="John Czairee S. Buenaventura" class="profile-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                <div class="profile-initials" aria-hidden="true">JB</div>
+                <div class="profile-ring"></div>
+              </div>
+            </div>
+            <div class="hero-text">
+              <p class="hero-label">Open to opportunities</p>
+              <h1>John Czairee <span>S. Buenaventura</span></h1>
+              <p class="hero-lead">IT Professional / Software Developer / Tech Support Specialist</p>
+              <p class="hero-bio">
+                I build practical software, troubleshoot complex systems, and turn ideas into working solutions.
+                Based in Morong, Rizal — focused on clean code, real impact, and continuous learning.
+              </p>
+              <div class="hero-links">
+                <a href="https://github.com/czairee" target="_blank" rel="noopener">github</a>
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener">linkedin</a>
+                <a href="mailto:czaireejohn@gmail.com">email</a>
+              </div>
+            </div>
+          </div>
 
-  <footer>
-    <div class="container">
-      <p>&copy; <span id="year"></span> John Czairee S. Buenaventura. All rights reserved.</p>
-    </div>
-  </footer>
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-value">3+</div>
+              <div class="stat-label">PROJECTS</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <div class="stat-value">2022</div>
+              <div class="stat-label">STUDYING IT</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <div class="stat-value">2</div>
+              <div class="stat-label">CCNA CERTS</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <div class="stat-value">PH</div>
+              <div class="stat-label">BASED IN RIZAL</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="stack">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-index">01</span>
+            <h2 class="section-title">Stack</h2>
+          </div>
+          <p class="section-subtitle">Technologies and tools I work with</p>
+          <div class="stack-grid">
+            <article class="stack-card fade-in">
+              <h3>Languages</h3>
+              <p>HTML, CSS, JavaScript, PHP, Java, Kotlin, Python, C/C++, SQL</p>
+            </article>
+            <article class="stack-card fade-in">
+              <h3>Tools</h3>
+              <p>VS, Android Studio, Dev C++, PyCharm, VirtualBox, Arduino</p>
+            </article>
+            <article class="stack-card fade-in">
+              <h3>IT Skills</h3>
+              <p>Hardware, diagnostics, networking, OS install, driver config, support</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="projects">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-index">02</span>
+            <h2 class="section-title">Projects</h2>
+          </div>
+          <p class="section-subtitle">Selected recent work</p>
+          <div class="projects-list">
+            <article class="project-item fade-in">
+              <div class="project-meta">
+                <h3>Gzing App</h3>
+                <p class="project-tech">Kotlin, XML / 2025</p>
+              </div>
+              <p class="project-desc">Native Android geofencing app with proximity alerts and high-priority notifications for commuters.</p>
+            </article>
+            <article class="project-item fade-in">
+              <div class="project-meta">
+                <h3>Yviang's Kitchen</h3>
+                <p class="project-tech">PHP, MySQL, HTML/CSS/JS / 2024</p>
+              </div>
+              <p class="project-desc">Inventory and sales management system with real-time stock alerts and reporting.</p>
+            </article>
+            <article class="project-item fade-in">
+              <div class="project-meta">
+                <h3>Drippy E-Commerce</h3>
+                <p class="project-tech">PHP, MySQL, JavaScript, CSS / 2023</p>
+              </div>
+              <p class="project-desc">Full-stack e-commerce platform with product management, user accounts, and order processing.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-index">03</span>
+            <h2 class="section-title">Experience</h2>
+          </div>
+          <p class="section-subtitle">Internship and work history</p>
+          <div class="experience-list">
+            <article class="experience-item fade-in">
+              <div class="experience-header">
+                <h3>IT / Tech Support Intern</h3>
+                <p class="experience-company">MicroPhase Corporation</p>
+              </div>
+              <p class="experience-period">Internship</p>
+              <ul>
+                <li>Troubleshot and maintained desktops, laptops, and monitors</li>
+                <li>Upgraded RAM, SSDs, and assembled QA-checked workstations</li>
+                <li>Installed OS, drivers, and software across devices</li>
+                <li>Assisted with basic network setup and connectivity troubleshooting</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="education">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-index">04</span>
+            <h2 class="section-title">Education</h2>
+          </div>
+          <p class="section-subtitle">Academic background and credentials</p>
+          <div class="education-list">
+            <article class="education-item fade-in">
+              <h3>BS Information Technology</h3>
+              <p>Our Lady of Fatima University / 2022 – 2026</p>
+            </article>
+            <article class="education-item fade-in">
+              <h3>Senior High School (TVL-ICT)</h3>
+              <p>Tomas Claudio Colleges / 2020 – 2022</p>
+            </article>
+            <article class="education-item fade-in">
+              <h3>Cisco Networking Academy</h3>
+              <p>CCNAv7: Introduction to Networks / CCNA Switching, Routing, and Wireless Essentials</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-index">05</span>
+            <h2 class="section-title">Contact</h2>
+          </div>
+          <p class="section-subtitle">Open to opportunities, collabs, and technical conversations</p>
+          <div class="contact-row">
+            <a href="tel:+639274855355" class="contact-pill fade-in">+63 927 4855 355</a>
+            <a href="mailto:czaireejohn@gmail.com" class="contact-pill fade-in">czaireejohn@gmail.com</a>
+            <a href="https://github.com/czairee" target="_blank" rel="noopener" class="contact-pill fade-in">@czairee</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <button class="scroll-top" aria-label="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
   <script src="js/main.js"></script>
 </body>
