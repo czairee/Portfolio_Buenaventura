@@ -93,6 +93,20 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 /* =========================================================
+   Scroll-to-top button visibility
+   ========================================================= */
+const scrollTopBtn = document.querySelector('.scroll-top');
+if (scrollTopBtn) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) {
+      scrollTopBtn.classList.add('visible');
+    } else {
+      scrollTopBtn.classList.remove('visible');
+    }
+  }, { passive: true });
+}
+
+/* =========================================================
    Typewriter effect for hero subtitle
    ========================================================= */
 (function() {
@@ -139,5 +153,25 @@ window.addEventListener('scroll', () => {
 document.querySelectorAll('.skill-card').forEach(card => {
   card.addEventListener('mouseenter', () => {
     card.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+  });
+});
+
+/* =========================================================
+   Project cards tilt on hover
+   ========================================================= */
+document.querySelectorAll('.project-card').forEach(card => {
+  card.addEventListener('mousemove', (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const rotateX = ((y - centerY) / centerY) * -3;
+    const rotateY = ((x - centerX) / centerX) * 3;
+    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
+  });
+
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = '';
   });
 });

@@ -31,6 +31,10 @@
     <section class="hero" id="about">
       <div class="container hero-grid">
         <div class="hero-content">
+          <div class="hero-badge">
+            <span class="status-dot"></span>
+            <span class="status-text">Open to opportunities</span>
+          </div>
           <p class="hero-greeting">Hi, I'm</p>
           <h1>John Czairee <span>S. Buenaventura</span></h1>
           <p class="hero-subtitle">IT Professional | Software Developer | Tech Support Specialist</p>
@@ -59,7 +63,8 @@
         </div>
         <div class="hero-image">
           <div class="profile-card">
-            <img src="images/profile.jpg" alt="John Czairee S. Buenaventura" class="profile-img" />
+            <img src="images/profile.jpg" alt="John Czairee S. Buenaventura" class="profile-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="profile-initials" aria-hidden="true">JB</div>
             <div class="profile-ring"></div>
           </div>
         </div>
@@ -239,6 +244,10 @@
       </div>
     </section>
   </main>
+
+  <button class="scroll-top" aria-label="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    ↑
+  </button>
 
   <footer>
     <div class="container">
